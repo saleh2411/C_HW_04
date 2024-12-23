@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define _CRT_SECURE_NO_WARNINGS
-
 
 // Define a struct for Student
 typedef struct Student {
@@ -27,102 +25,28 @@ Student* createStudent(int ID, const char* name, int age, float GPA) {
     newStudent->GPA = GPA;
     newStudent->next = NULL;
     return newStudent
-//hi fuck
 }
 
 
 // Function to create a linked list of students
 Student* createStudentList() {
-     Student* head = NULL;
-    Student* tail = NULL;
-    int n;
 
-    printf("Enter the number of students: ");
-    scanf("%d", &n);
-
-    for (int i = 0; i < n; i++) {
-        int ID, age;
-        float GPA;
-        char name[50];
-
-        printf("\nEnter details for student %d:\n", i + 1);
-        printf("ID: ");
-        scanf("%d", &ID);
-        printf("Name: ");
-        scanf("%s", name);
-        printf("Age: ");
-        scanf("%d", &age);
-        printf("GPA: ");
-        scanf("%f", &GPA);
-
-        Student* newStudent = createStudent(ID, name, age, GPA);
-
-        if (!head) {
-            head = newStudent;
-            tail = newStudent;
-        } else {
-            tail->next = newStudent;
-            tail = newStudent;
-        }
-    }
-
-    return head;
 }
 
 // Function to find the student with the highest GPA
 Student* findTopStudent(Student* head) {
-      if (!head) return NULL;
-
-    Student* topStudent = head;
-    for (Student* curr = head->next; curr != NULL; curr = curr->next) {
-        if (curr->GPA > topStudent->GPA) {
-            topStudent = curr;
-        }
-    }
-    return topStudent;
 }
 
 // Function to delete the student with the lowest GPA
 Student* deleteLowestGPA(Student* head) {
-     if (!head) return NULL;
-
-    Student* temp = head;
-    Student* prev = NULL;
-    Student* lowest = head;
-    Student* lowestPrev = NULL;
-
-    while (temp) {
-        if (temp->GPA < lowest->GPA) {
-            lowest = temp;
-            lowestPrev = prev;
-        }
-        prev = temp;
-        temp = temp->next;
-    }
-
-    if (!lowestPrev) {
-        head = lowest->next;  // Lowest is the head
-    } else {
-        lowestPrev->next = lowest->next;
-    }
-    free(lowest);
-    return head;
 }
 
 // Function to print all students
 void printAllStudents(Student* head) {
-    for (Student* curr = head; curr != NULL; curr = curr->next) {
-        printf("ID: %d, Name: %s, Age: %d, GPA: %.2f\n", curr->ID, curr->name, curr->age, curr->GPA);
-    }
 }
 
 // Function to free the memory of the entire student list
 void freeStudentList(Student* head) {
-     while (head) {
-        Student* temp = head;
-        head = head->next;
-        free(temp);
-    }
 }
 
 int main() {
