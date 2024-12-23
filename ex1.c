@@ -13,7 +13,18 @@ typedef struct Student {
 
 // Function to create a new student
 Student* createStudent(int ID, const char* name, int age, float GPA) {
-    
+    Student* newStudent = (Student*)malloc(sizeof(Student));
+    if (!newStudent) {
+        perror("Failed to allocate memory for new student");
+        exit(EXIT_FAILURE);
+    }
+    newStudent->ID = ID;
+    strncpy(newStudent->name, name, sizeof(newStudent->name) - 1);
+    newStudent->name[sizeof(newStudent->name) - 1] = '\0';
+    newStudent->age = age;
+    newStudent->GPA = GPA;
+    newStudent->next = NULL;
+    return newStudent
 }
 
 

@@ -1,4 +1,5 @@
 
+//fu
 #include <stdio.h>
 #include <math.h>
 
@@ -14,6 +15,7 @@ typedef struct triangle {
 
 // Function to calculate the perimeter of a triangle in 3 D
 double perimeter(const Triangle* t) {
+    
 }
 
 // Function to calculate the area of a triangle in 3D 
