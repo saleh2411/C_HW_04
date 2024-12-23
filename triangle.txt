@@ -1,0 +1,6 @@
+Enter the coordinates of the 3 points of the triangle (x, y, z) format:
+Point 1 (x y z): 1 1 1
+Point 2 (x y z): 2 2 2
+Point 3 (x y z): 3 3 3
+Perimeter: 6.928203
+Area: 0.000000

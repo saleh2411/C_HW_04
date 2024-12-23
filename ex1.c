@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 // Define a struct for Student
 typedef struct Student {
     int ID;

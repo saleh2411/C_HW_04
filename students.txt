@@ -1,0 +1,33 @@
+Enter number of students: 2
+Enter details for student 1:
+ID: 123456789
+Name: Alice
+Age: 23
+GPA: 3
+Enter details for student 2:
+ID: 987654321
+Name: Bob
+Age: 35
+GPA: 2
+
+All Students:
+ID: 123456789
+Name: Alice
+Age: 23
+GPA: 3.00
+ID: 987654321
+Name: Bob
+Age: 35
+GPA: 2.00
+
+Top Student:
+ID: 123456789
+Name: Alice
+Age: 23
+GPA: 3.00
+
+After deleting the student with the lowest GPA:
+ID: 123456789
+Name: Alice
+Age: 23
+GPA: 3.00
