@@ -27,6 +27,7 @@ Student* createStudent(int ID, const char* name, int age, float GPA) {
     newStudent->GPA = GPA;
     newStudent->next = NULL;
     return newStudent
+//hi fuck
 }
 
 
