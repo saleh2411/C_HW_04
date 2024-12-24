@@ -27,7 +27,7 @@ int main() {
     // double x, y, z;
     for (int i = 1; i <= 3; i++)
     {
-        printf("Point %i (x y z): ");
+        printf("Point %d (x y z): ", i);
         scanf("%lf %lf %lf", &pts[i].x, &pts[i].y, &pts[i].z);
     }
     Triangle t = {pts[1], pts[2], pts[3]};
