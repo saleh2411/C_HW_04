@@ -23,18 +23,18 @@ double area(const Triangle* t) {
 }
 
 int main() {
-
-    double x, y, z;
+    Point pts [3]; //Array of 3 points
+    // double x, y, z;
     for (int i = 1; i <= 3; i++)
     {
         printf("Point %i (x y z): ");
-        scanf("%lf %lf %lf", &x, &y, &z);
+        scanf("%lf %lf %lf", &pts[i].x, &pts[i].y, &pts[i].z);
     }
-    
+    Triangle t = {pts[1], pts[2], pts[3]};
 
     // Print the results
-    printf("Perimeter: %.6f\n", perimeter);
-    printf("Area: %.6f\n", area);
+    printf("Perimeter: %.6f\n", perimeter(&t));
+    printf("Area: %.6f\n", area(&t));
 
     return 0;
 }
